@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- setting viewports -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- adding favicon onto browser tab -->
+        <link rel="icon" href="./Images/favicon-32x32.png" type="image/x-icon">
+
+        <!-- CSS import -->
+        <link rel="stylesheet" href="./CSS/home.css" type="text/css">
+
+        <!-- importing font awesome icons, star icons and social media icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/99c03c2332.js" crossorigin="anonymous"></script>
+        
+        <title>Contact - CB Web Development</title>
+    </head>
+    <body>
+        <!-- navigation section -->
+        <header>
+            <nav class="navigation">
+                <a href="./Home.html" id="home">HOME</a>
+                <a href="./Portfolio.html" id="portfolio">PORTFOLIO</a>
+                <a href="#" id="contact">CONTACT</a>
+            </nav>
+        </header>
+
+        <!-- main content for the page -->
+        <main>
+            <section class="contact-me">
+                <h3 class="main-header">Please fill in the below form to contact me</h3>
+                <form action="/submit" method="post" id="contact-form">
+
+                    <!--first name text field -->
+                    <input type="text" id="name" name="name" placeholder="First name" required />
+                    <br>
+                    <br>
+
+                    <!-- project description text field -->
+                    <textarea id="project-description" name="project-description" rows="12" cols="55" placeholder="Please add a project description here..." required></textarea>
+                    <br>
+                    <br>
+
+                    <!-- email address field -->
+                    <input type="email" id="email" name="email" placeholder="Email address" pattern="^[^@]+@[^@.]+\.[^@]{2,}" required />
+                    <br>
+                    <br>
+
+                    <!-- confirm email address field -->
+                    <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirm email address" pattern="^[^@]+@[^@.]+\.[^@]{2,}" required />
+                    <br>
+                    <br>
+
+                    <!-- contact number field -->
+                    <input type="text" id="contact-number" name="contact-number" placeholder="Contact number" required />
+                    <br>
+                    <br>
+
+                    <!-- preferred contact method checkboxes -->
+                    <p>What is your preferred contact method? <em id="tick-box">- Tick all that apply</em></p>
+                    <label for="phone-contact">Phone</label>
+                    <input type="checkbox" id="phone-contact" name="contact-method" value="phone-contact" onchange="checkBox(value)" required/> 
+                    <label for="email-contact">Email address</label>
+                    <input type="checkbox" id="email-contact" name="contact-method" value="email-contact" onchange="checkBox(value)" required/>
+                    <br>
+                    <br>
+
+                    <!--  Project start date picker -->
+                    <label>Select project start date</label>
+                    <input type="date" id="project-start" name="project-start" required />
+                    <br>
+                    <br>
+
+                    <!-- Project duration -->
+                    <label for="project-duration">Please select project duration</label>
+                    <select id="project-duration" name="project-duration" value="" onchange="showHide(this.value)" required>
+                            <option value="none" selected disabled hidden>Select an option</option>
+                            <option value="less-than-month" id="less-than-month">Less that a month</option>
+                            <option value="1-2-month" id="1-2-month">1-2 months</option>
+                            <option value="2-3-month" id="2-3-month">2-3 months</option>
+                            <option value="3-6-month" id="3-6-month">3-6 months</option>
+                            <option value="over-6-month" id="over-6-month">Over 6 months</option>
+                            <option value="other" id="other">Other</option>
+                    </select>
+                    <br>
+                    
+                    <!-- additional text box hidden unless other is selected in project duration dropdown (set in JavaScript)-->
+                    <textarea id="other-duration" name="other-duration" row="3" cols="30" placeholder="Please add project duration" required></textarea>
+                    <!-- submit button -->
+                    <input type="submit" id="submit" value="submit" style="width:100px"/>
+                </form>
+            </section>
+            <!-- modal creation -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Form Summary</h2>
+                    <p><strong>Name:</strong> <span id="modal-name"></span></p>
+                    <p><strong>Project Description:</strong> <span id="modal-project-description"></span></p>
+                    <p><strong>Email:</strong> <span id="modal-email"></span></p>
+                    <p><strong>Contact Number:</strong> <span id="modal-contact-number"></span></p>
+                    <p><strong>Preferred Contact Methods:</strong> <span id="modal-contact-methods"></span></p>
+                    <p><strong>Project Start Date:</strong> <span id="modal-project-start"></span></p>
+                    <p><strong>Project Duration:</strong> <span id="modal-project-duration"></span></p>
+                    <p><strong>Other Duration:</strong> <span id="modal-other-duration"></span></p>
+                    <button id="close-modal">Close</button>
+                </div>
+            </div>
+
+        </main>
+        <!-- JavaScript script import -->
+         <!-- !!!THIS IS DIFFERENT JAVASCRIPT TO THE OTHER TWO PAGES AS ITS MORE COMPLEX!!! -->
+        <script defer src="./JS/contact.js"></script>
+    </body>
+
+    <!-- footer section with name, email, sun number and social media icons that link out to the relevant social media locations -->
+    <footer>
+        <section id="footer">
+            <div class="contact-info">
+                <p id="name">Christopher Bowen</p>
+                <a href="mailto:240352606@aston.ac.uk" id="aston-email">240352606@aston.ac.uk</a>
+                <p>SUN number: 240352606</p>
+            </div>
+            <!-- seperated out the text and social media icons for easier css styling -->
+            <div class="social-links">
+                <a href="https://github.com/chrisbowen0" class="fa-brands fa-github" target="_blank"></a>
+                <a href="https://www.linkedin.com/in/christopher-bowen-54752632/" class="fa fa-linkedin" target="_blank"></a>
+            </div>
+        </section>
+    </footer>
+    <!-- end of footer area -->
+</html>

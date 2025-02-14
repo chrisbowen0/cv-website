@@ -1,0 +1,414 @@
+/* global styling for fonts across the site to make it easier than styling each font element individually */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* coloring for all headers */
+h1, h2, h3 {
+  color: #007bb5;
+}
+
+/* body styling so that the navigation and footer don't have a gap on the left or right */
+body {
+  background-color: antiquewhite;
+  margin: 0;
+}
+
+/* stops content being flush with left side of screen caused by body margin being 0 */
+main {
+  margin: 8px;
+}
+
+/* navigation styling to make it fixed at the top of the screen */
+.navigation {
+  background-color: #d8f9ff;
+  padding: 30px 10px; 
+  text-align: center; 
+  font-size: 3vw; 
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  transition: 0.4s;
+}
+
+/* navigation link styling */
+
+/* highlighting the active page in the nav so the user knows what page they are visiting */
+.navigation a.active {
+  font-weight: bold;
+  color: #df1212; 
+  border: 2px solid #007bff; 
+}
+
+/* hover over in nav */
+#home:hover, #portfolio:hover, #contact:hover {
+  opacity: 0.7;
+}
+
+/* styling for home link in nav */
+.navigation #home {
+  margin-right: 50px;
+  padding: 10px;  
+  text-decoration: none;
+}
+
+/* styling for the portfolio link in the nav */
+.navigation #portfolio {
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* styling for contact link in nav */
+.navigation #contact {
+  margin-left: 50px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* main header styling for all pages */
+.main-header {
+  padding-top: 120px;
+  text-align: left;
+}
+.main-header h1 {
+  text-align: center;
+}
+
+/* Home page styling */
+
+/* Home page heading style */
+.about > h2 {
+  background-color: antiquewhite;
+}
+
+/* home page image alignment */
+#image {
+  text-align: center;
+}
+
+/* home page image styling - picture of me */
+#image img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;  
+}
+
+/* styling for coding languages to make them bold and not show bullets */
+#skills > li {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+/* remove underline from anchor links on pages */
+a {
+  text-decoration: none; 
+}
+
+/* bolding 'Aston University' as emphasised text */
+em {
+  font-weight: bold;
+}
+
+/* Portfolio css */
+
+/*Goose project styling */
+#goose, h2 {
+  background-color:bisque;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+/* styling of content to make it appear next to each other with img on left and text on right */
+#goose-game {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:bisque;
+  padding: 20px;
+}
+
+/* styling of image to make it resize with window */
+#goose-game > img {
+  display: block;
+  height: auto;
+  width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  #goose-game {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* styling of p element within the project area */
+#goose-game > p {
+  padding: 20px;
+  text-align: justify;
+}
+
+/* Sales project stlying */
+.sales-project > h3 {
+  background-color:bisque;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+/* styling of content to make it appear next to each other with img on right and text on left */
+#sales-project {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background-color:bisque;
+  padding: 20px;
+}
+
+/* styling of image to make it resize with window */
+#sales-project > img {
+  display: block;
+  height: auto;
+  width: 50%;
+}
+@media only screen and (max-width: 800px) {
+  #sales-project {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* styling of p element within the project area */
+#sales-project > p {
+  padding: 20px 20px 20px 0px;
+  text-align: justify;
+}
+
+/* Ian Scott project style */
+.ian-scott > h3 {
+  background-color:bisque;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+/* styling of content to make it appear next to each other with img on left and text on right */
+#ian-scott {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:bisque;
+  padding: 20px;
+}
+
+/* image style, it is also a link */
+/* styling of image to make it resize with window */
+#ian-scott > a > img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+@media only screen and (max-width: 800px) {
+  #ian-scott {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* styling of the text within the ian-scott project */
+#quote {
+  padding: 20px 0px 20px 20px;
+  text-align: justify;
+  width: 100%;
+}
+
+/* blockquote styling on portfolio page */
+
+/* setting the text styling within blockquote */
+blockquote {
+  position: relative;
+  font-style: italic; 
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+/* setting up the quote icon before the blockquote quote */
+blockquote::before {
+  content: "“"; 
+  font-size: 3em; 
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  color: #ccc;
+}
+
+/* setting up the quote icon after the blockquote quote */
+blockquote::after {
+  content: "”"; 
+  font-size: 3em; 
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  color: #ccc; 
+}
+
+/*contact page style */
+
+/* setting all text to left align within the contact-me section within the contact-me class */
+.contact-me {
+  text-align: left;
+}
+
+/* styling for the em tag witin the checkboxes so that it's italic and slightly smaller than the rest of the text */
+#tick-box {
+  font-style: italic;
+  font-size: 12px;
+}
+
+/* hidden text area styling for drop down on form */
+/* hidden by default but adds margin when it is displayed */
+#other-duration{
+  margin-top: 10px;
+}
+
+/* button styling */
+#submit {
+  margin-top: 10px;
+}
+
+/* footer css */
+
+/* footer section styling */
+#footer {
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  background-color: #d8f9ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* spacing for the elements within the footer section */
+#footer p, #footer a {
+  margin: 5px 10px;
+}
+
+/* styling for the text (name, email and SUN number) */
+#footer .contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* styling for the GitHub and Linkedin icons */
+#footer .social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;;
+}
+
+/* modal styling on contact page */
+
+/* modal styling hidden by default*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* styling the h2 element within the modal so it has the same background as the rest of the modal */
+.modal h2 {
+  background-color: white;
+}
+
+/* modal styling for the content ie the text and buttons */
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+  padding: 20px;
+}
+
+/* styling for the close button within the modal */
+#close-modal {
+  cursor: pointer;
+  background: #260604;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* styling for the X icon within the modal */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+/* adding hover over style for the close button and X close icon */
+.close:hover, #close-modal:hover {
+  opacity: 0.7;
+}
+
+/* CSS code for the icons*/
+
+/* styling for the star icons when they have the class checked (to show the level of experience in coding languages */
+/* thanks to font awesome for these icons */
+.checked {
+  color: orange;
+}
+
+/* font awesome icon styling */
+/* styling of the linkedIn icon */
+.fa {
+    padding: 4px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;   
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    height: 13.5px;
+  }
+
+  /* styling of the GitHub icon */
+  .fa-brands {
+    padding: 0px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  /* adding hover over state to social media icons */
+  .fa:hover, .fa-brands:hover {
+    opacity: 0.7;
+  }

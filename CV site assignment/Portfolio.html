@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- setting viewports -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio - CB Web Development</title>
+
+        <!-- adding favicon onto browser tab -->
+        <link rel="icon" href="./Images/favicon-32x32.png" type="image/x-icon">
+
+        <!-- CSS import -->
+        <link rel="stylesheet" href="./CSS/home.css" type="text/css">
+
+        <!-- importing font awesome icons, star icons and social media icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/99c03c2332.js" crossorigin="anonymous"></script>
+       
+    </head>
+    <body>
+        <!-- navigation section -->
+        <header>
+            <nav class="navigation">
+                <a href="./Home.html" id="home">HOME</a>
+                <a href="#" id="portfolio">PORTFOLIO</a>
+                <a href="./Contact.html" id="contact">CONTACT</a>
+            </nav>
+        </header>
+        
+        <!-- main content for the page -->
+        <main>
+            <!-- goose game section split out due to css styling simplification -->
+            <section>
+                <div class="main-header">
+                    <h3 id="goose">Goose game - University assignment</h3>
+                </div>
+                <div id="goose-game">
+                <img src="./Images/Goose game.png" alt="A screenshot of a Goose game I created for a University assignment">
+                <p>
+                    I was tasked with creating something using the processing.js application utilising my knowledge of Java the only caveat being
+                    I had to use a goose in there somewhere due to the association with Geese and Aston University (my university). The outcome was
+                    a game where the player controls a red square and runs around the screen collecting the Geese eggs whilst running away from a Goose,
+                    the goose gets faster everytime the player collects 4 eggs as well as the eggs randomly spawning around the screen everytime 4 have been collected.
+                    A few extra notes are the goose has one eye that is constantly fixed on the player as they are running around and the player can run off 
+                    the screen and appear on the opposite side of the screen rather than disappearing.
+                    I received a first class grade for this assignment and I am very proud of the outcome considering the work I put into it.
+                </p>
+                </div>
+            </section>
+            <br>
+            <br>
+
+            <!-- sales project section -->
+            <section class="sales-project">
+                <h3>Sales project - University assignment</h3>
+                <div id="sales-project">
+                    <img src="./Images/sales project.png" alt="screenshot of the outcome of running my sales project code showing a list of items, how much the total cost is as well as the refund amounts">
+                    <br>
+                    <p>
+                        The second assignment I was tasked with at University was to create a piece of software that allows a customer to purchase products and services, 
+                        refunding the items and working out delivery costs based on weight. I created an ArrayList of products and services to allows the customer to choose from, products included weight 
+                        whereas services did not, I then used some methods to workout the cost of delivery for products and then the total amount for all items added together including any delivery cost 
+                        I also allowed for refunds to be made based on the customer requesting which items they wanted to have refunded.
+                    </p>
+                </div>
+            </section>
+            <br>
+            <br>
+        
+            <!-- ian Scott section -->
+            <section class="ian-scott">
+                <h3>Company revamp of website - Current ongoing project</h3>
+                <div id="ian-scott">
+                    <a href="http://www.ianscottgritting.co.uk/"><img src="./Images/ian scott.png" alt="A screenshot of the current company website before revamp - links out to company website"></a>
+                    <br>
+                    <br>
+                    <!-- quote section leading into blockquote -->
+                    <div id="quote">
+                        <p>I offered a self employed friend of mine a website revamp as his current site is very old and I wanted to add some real world experience to my portfolio.
+                            I am currently in the process of revamping the site and will update the image and description once it has been completed.
+                        </p>
+                        <!-- blockquote section - see styling in css -->
+                        <blockquote>
+                            <p>Chris has been really great with his communication and I've allowed him free rein for the design and development process</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- end of main section-->
+        <br>
+
+        <!-- JavaScript script import -->
+        <script defer src="./JS/index.js"></script>
+    </body>
+
+    <!-- footer section with name, email, sun number and social media icons that link out to the relevant social media locations -->
+    <footer>
+        <section id="footer">
+            <div class="contact-info">
+                <p id="name">Christopher Bowen</p>
+                <a href="mailto:240352606@aston.ac.uk" id="aston-email">240352606@aston.ac.uk</a>
+                <p>SUN number: 240352606</p>
+            </div>
+            <!-- seperated out the text and social media icons for easier css styling -->
+            <div class="social-links">
+                <a href="https://github.com/chrisbowen0" class="fa-brands fa-github" target="_blank"></a>
+                <a href="https://www.linkedin.com/in/christopher-bowen-54752632/" class="fa fa-linkedin" target="_blank"></a>
+            </div>
+        </section>
+    </footer>
+    <!-- end of footer area -->
+</html>
